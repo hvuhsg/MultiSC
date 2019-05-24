@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_namespace_packages
 
 setup(
   name = 'MultiServer',         # How you named your package folder (MyLib)
-  packages = ['MultiServer'],   # Chose the same as "name"
-  version = '0.2',      # Start with a small number and increase it with every change you make
+  packages = find_namespace_packages(),   # Chose the same as "name"
+  version = '0.3',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Server for your app needs',   # Give a short description about your library
   author = 'Yehoyada.s',                   # Type in your name

@@ -1,10 +1,13 @@
-import __config__.protocol_code_config as config
-import __config__.users_config as user_config
-from protocols.protocol import Protocol
-
-from time import time
 import re
-from global_objects import ManagementServerDB
+from time import time
+
+from ..protocol import Protocol
+
+from ...__config__ import protocol_code_config as config
+from ...__config__ import users_config as user_config
+from ...global_objects import ManagementServerDB
+
+
 
 
 class UserProtocol(Protocol):

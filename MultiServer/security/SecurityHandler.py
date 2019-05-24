@@ -3,7 +3,7 @@ import base64
 import rsa
 
 from .encryption import Encryption
-from .security_config import get_config
+#from .security_config import get_config
 
 from ..__config__ import security_config as config
 from ..global_objects import SERI, DE_SERI
@@ -32,19 +32,22 @@ class SecurityHandler:
 
     def __init__(self, connection):
         self.logger = logging.getLogger("SecurityHandler")
-        encryption_class, sign_key, asymmetric_key, encryption_private_key = (
-            get_config()
-        )  # from security_config
+        try:
+            encryption_class, sign_key, asymmetric_key, encryption_private_key = (
+                get_config()
+            )  # from security_config
+        
+            if not issubclass(encryption_class, Encryption):
+                raise ValueError(
+                    "class {} is not sub class of Encryption".format(encryption_class)
+                )
 
-        if not issubclass(encryption_class, Encryption):
-            raise ValueError(
-                "class {} is not sub class of Encryption".format(encryption_class)
-            )
-
-        self.encryption_private_key = encryption_private_key
-        self.encryption_class = encryption_class
-        self.sign_key = sign_key
-        self.asymmetric_key = asymmetric_key
+            self.encryption_private_key = encryption_private_key
+            self.encryption_class = encryption_class
+            self.sign_key = sign_key
+            self.asymmetric_key = asymmetric_key
+        except:
+            pass
         self.connection = connection
         self.is_secure = False
 

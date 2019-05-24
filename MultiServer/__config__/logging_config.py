@@ -1,7 +1,7 @@
 import logging
 
 
-filename = r"MultiServer\Logs\server.log"
+filename = r"server.log"
 
 loggin_format = "%(levelname)s - %(asctime)s - %(threadName)s - %(name)s: %(message)s"
 

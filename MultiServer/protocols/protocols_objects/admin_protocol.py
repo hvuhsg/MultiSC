@@ -1,6 +1,6 @@
-import __config__.protocol_code_config as config
-from protocols.protocol import Protocol
-from global_objects import GLOBAL_OBJECTS
+from ...__config__ import protocol_code_config as config
+from ...global_objects import GLOBAL_OBJECTS
+from ..protocol import Protocol
 
 
 class AdminProtocol(Protocol):

@@ -1,6 +1,6 @@
-from ..protocol import Protocol
-from global_objects import ManagementServerDB
 import base64
+from ..protocol import Protocol
+from ...global_objects import ManagementServerDB
 
 
 class MsProtocol(Protocol):

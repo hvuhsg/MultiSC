@@ -1,5 +1,5 @@
 from ..protocol import Protocol
-from global_objects import ManagementServerDB
+from ...global_objects import ManagementServerDB
 
 
 class LogsProtocol(Protocol):

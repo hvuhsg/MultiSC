@@ -1,6 +1,6 @@
-from protocols.protocol import Protocol
-from Exceptions.CloseConnection import CloseConnection
-from Exceptions.TestException import TestException
+from ..protocol import Protocol
+from ...Exceptions.CloseConnection import CloseConnection
+from ...Exceptions.TestException import TestException
 
 
 class TestProtocol(Protocol):

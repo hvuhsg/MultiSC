@@ -1,3 +1,5 @@
+import traceback
+
 from .temp_db import TempDB
 from .MongoDB import GlobalMongoDbClient
 from .VirtualDB import VirtualDBClient
@@ -42,6 +44,7 @@ def setup_all():
             g_object.__setup__()
             print("setup:", g_object)
         except Exception as ex:
+            traceback.print_exc()
             print("setup except on {}:".format(g_object), ex)
 
 

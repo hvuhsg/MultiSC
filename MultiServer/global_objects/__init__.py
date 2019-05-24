@@ -1,10 +1,10 @@
 from .temp_db import TempDB
 from .MongoDB import GlobalMongoDbClient
 from .VirtualDB import VirtualDBClient
-from protocols.protocol_factory import Factory
-from security.serializer import serializer, de_serializer
+from ..protocols.protocol_factory import Factory
+from ..security.serializer import serializer, de_serializer
 from .global_object import GLOBAL_OBJECTS
-from __config__ import db_config as config
+from ..__config__ import db_config as config
 
 __all__ = [
     "TEMP_DB",

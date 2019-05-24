@@ -32,12 +32,12 @@ from socket import timeout
 from socketserver import BaseRequestHandler
 from threading import current_thread
 
-import __config__.request_handler_config as config
-from Exceptions.CloseConnection import CloseConnection
-from protocols.ProtocolHandler import ProtocolManager
-from security.SecurityHandler import SecurityHandler
-from global_objects import SERI, DE_SERI
-from Handlers.catch_events_handler import CatchEventsHandler
+from ..__config__ import request_handler_config as config
+from ..Exceptions.CloseConnection import CloseConnection
+from ..protocols.ProtocolHandler import ProtocolManager
+from ..security.SecurityHandler import SecurityHandler
+from ..global_objects import SERI, DE_SERI
+from ..Handlers.catch_events_handler import CatchEventsHandler
 
 __all__ = ["RequestHandler"]
 

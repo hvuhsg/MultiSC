@@ -1,5 +1,5 @@
+from ..__config__.protocol_code_config import server_error
 from .MainException import MainException
-from __config__.protocol_code_config import server_error
 
 
 class TestException(MainException):

@@ -1,6 +1,6 @@
 from threading import Event
 
-from global_objects import finish_all
+from ..global_objects import finish_all
 
 finish_event = Event()
 

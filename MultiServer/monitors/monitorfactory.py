@@ -1,9 +1,9 @@
 from .monitor_classs.BlockPentest import BlockPentest
-from global_objects.global_object import GlobalObject
-import __config__.system_config as sys_config
+from ..global_objects.global_object import GlobalObject
+from ..__config__ import system_config as sys_config
 
 if sys_config.quick_setup_mod:
-    from quick_setup import MonitorManager
+    from ..quick_setup import MonitorManager
 
 __all__ = ["MonitorFactory"]
 

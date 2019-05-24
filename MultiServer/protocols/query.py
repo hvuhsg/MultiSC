@@ -1,5 +1,5 @@
-import __config__.protocol_code_config as config
-from Exceptions.QueryKeyError import QueryKeyError
+from ..__config__ import protocol_code_config as config
+from ..Exceptions.QueryKeyError import QueryKeyError
 
 
 class Query:

@@ -1,5 +1,5 @@
 import logging
-from DB.TempDB import TempDB
+from ..DB.TempDB import TempDB
 
 
 class State(TempDB):

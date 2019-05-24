@@ -1,7 +1,7 @@
 import logging
 
-from __config__.logging_config import catch_event_level
-from global_objects import ManagementServerDB
+from ..__config__.logging_config import catch_event_level
+from ..global_objects import ManagementServerDB
 
 
 class CatchEventsHandler(logging.Handler):

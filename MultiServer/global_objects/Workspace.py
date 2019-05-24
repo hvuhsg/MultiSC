@@ -1,6 +1,6 @@
-from global_objects import GLOBAL_OBJECTS
-from global_objects.global_object import GlobalObject, GlobalObjectOptions
-from DB.TempDB import TempDB
+from ..global_objects import GLOBAL_OBJECTS
+from ..global_objects.global_object import GlobalObject, GlobalObjectOptions
+from ..DB.TempDB import TempDB
 
 from threading import Thread, current_thread
 from setup import start_event

@@ -1,11 +1,15 @@
 from time import time
-
-import __config__.protocol_code_config as config
-from global_objects import protocols_factory, GLOBAL_OBJECTS
-from protocols.state import State
-from protocols.query import Query
-from Exceptions.ExceptionHandler import ExceptionHandler
 from threading import current_thread
+
+from .state import State
+from .query import Query
+
+from ..__config__ import protocol_code_config as config
+from ..global_objects import protocols_factory, GLOBAL_OBJECTS
+from ..Exceptions.ExceptionHandler import ExceptionHandler
+
+
+
 
 
 class ProtocolManager:

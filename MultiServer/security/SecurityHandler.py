@@ -2,10 +2,12 @@ import logging
 import base64
 import rsa
 
-import __config__.security_config as config
 from .encryption import Encryption
 from .security_config import get_config
-from global_objects import SERI, DE_SERI
+
+from ..__config__ import security_config as config
+from ..global_objects import SERI, DE_SERI
+
 
 CHECK_MESSAGE = config.CHECK_MESSAGE
 

@@ -1,10 +1,10 @@
 from threading import Event
 
-import finish
-import setup
-from ConnectionsHandler.server import Server
-from global_objects.Workspace import WorkspaceManager
-from global_objects.global_object import GlobalObject, GlobalObjectOptions
+from . import finish
+from . import setup
+from .ConnectionsHandler.server import Server
+from .global_objects.Workspace import WorkspaceManager
+from .global_objects.global_object import GlobalObject, GlobalObjectOptions
 
 
 __all__ = ["Runner"]

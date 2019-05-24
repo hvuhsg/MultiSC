@@ -19,12 +19,12 @@ attributes:
 
 import logging
 import threading
-import __config__.server_config as config
 from socketserver import ThreadingTCPServer
 
+from ..__config__ import server_config as config
+from ..global_objects.global_object import GlobalObject, GlobalObjectOptions
+from ..global_objects import ManagementServerDB
 from .RequestHandler import RequestHandler
-from global_objects.global_object import GlobalObject, GlobalObjectOptions
-from global_objects import ManagementServerDB
 
 
 class Server(ThreadingTCPServer, GlobalObject):

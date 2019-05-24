@@ -1,4 +1,4 @@
-from global_objects import TEMP_DB as temp_db
+from ..global_objects import TEMP_DB as temp_db
 
 
 class Monitor:

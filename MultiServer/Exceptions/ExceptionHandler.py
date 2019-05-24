@@ -1,10 +1,12 @@
 import logging
-import __config__.protocol_code_config as config
-import __config__.system_config as sys_config
-from .MainException import MainException
-from Exceptions.TestException import TestException
 from pymongo.errors import PyMongoError
-from Handlers.catch_events_handler import CatchEventsHandler
+
+from .MainException import MainException
+
+from ..__config__ import protocol_code_config as config
+from ..__config__ import system_config as sys_config
+from ..Exceptions.TestException import TestException
+from ..Handlers.catch_events_handler import CatchEventsHandler
 
 
 class ExceptionHandler:

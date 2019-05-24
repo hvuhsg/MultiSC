@@ -12,9 +12,9 @@ setup(
   download_url = 'https://github.com/hvuhsg/MultiServer/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['Server', 'Easy', 'app'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
-          "cryptography >= 2.3.1",
-          "rsa >= 4.0",
-          "pymongo >= 3.7.1",
+          "cryptography",
+          "rsa",
+          "pymongo",
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package

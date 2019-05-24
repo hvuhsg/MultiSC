@@ -1,8 +1,9 @@
 import logging
-import __config__.logging_config as config
 from threading import Event
-from global_objects import setup_all
-import monitors.monitorfactory  # do not delete!!
+
+from ..__config__ import logging_config as config
+from ..global_objects import setup_all
+from ..monitors import monitorfactory  # do not delete!!
 
 logging.basicConfig(
     level=config.level, format=config.loggin_format, filename=config.filename

@@ -11,7 +11,7 @@
 ### Server for your app needs.
 
 #### **Quick setup example (server)**
-```
+```python
 from MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
 
@@ -29,7 +29,7 @@ Server.run()
 ```
 
 #### **client example**
-```
+```python
 from MultiClient.EasyClient import EasyClient
 
 def main():

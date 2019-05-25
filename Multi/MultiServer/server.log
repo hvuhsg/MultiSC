@@ -1,7 +1,0 @@
-INFO - 2019-05-25 23:08:42,425 - MainThread - Server ('127.0.0.1', 84): setup
-INFO - 2019-05-25 23:08:49,595 - ('127.0.0.1', 57537) - RequestHandler: setup handler
-INFO - 2019-05-25 23:08:49,595 - ('127.0.0.1', 57537) - RequestHandler: proxy_data:  client sent: {'protocol': 'printer', 'function': 'name', 'name': 'hello'}
-INFO - 2019-05-25 23:08:49,596 - ('127.0.0.1', 57537) - RequestHandler: proxy_data:  client sent: {'protocol': 'math', 'function': 'sum', 'a': 5, 'b': 9}
-INFO - 2019-05-25 23:08:49,597 - ('127.0.0.1', 57537) - RequestHandler: finish
-INFO - 2019-05-25 23:08:50,428 - clean temp db thread - TempDB: clean <Thread(('127.0.0.1', 57537), stopped 8760)>
-INFO - 2019-05-25 23:09:06,671 - MainThread - Server ('127.0.0.1', 84): shutdown

@@ -1,15 +1,20 @@
 from setuptools import setup, find_namespace_packages
 
+with open('README.md', 'r') as f:
+    long_description = f.read()
+
 setup(
   name = 'MultiSC',         # How you named your package folder
   packages = find_namespace_packages(),   # Chose the same as "name"
   version = 'v0.1',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  license = 'MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Server and client for your app needs',   # Give a short description about your library
+  long_description = long_description,
+  long_description_content_type='text/markdown',
   author = 'Yehoyada.s',                   # Type in your name
   author_email = 'hvuhsg6@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/hvuhsg/Multi',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/hvuhsg/Multi/archive/v0.1.tar.gz',    # I explain this later on
+  url = 'https://github.com/hvuhsg/MultiSC',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/hvuhsg/MultiSC/archive/v0.1.tar.gz',    # I explain this later on
   keywords = ['Server', 'Client', 'Easy', 'app', 'client', 'server'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           "cryptography",

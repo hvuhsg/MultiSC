@@ -1,4 +1,4 @@
-# Multi  
+# MultiSC  
 
 <p align="center">
 <a href=""><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome"></a>
@@ -12,7 +12,7 @@
 
 #### **Quick setup example (server)**
 ```python
-from Multi.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
+from MultiSC.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
 
 @MonitorManager.add("client_info_printer")
@@ -30,7 +30,7 @@ Server.run()
 
 #### **client example**
 ```python
-from Multi.MultiClient.EasyClient import EasyClient
+from MultiSC.MultiClient.EasyClient import EasyClient
 
 def main():
     address = "127.0.0.1", 84

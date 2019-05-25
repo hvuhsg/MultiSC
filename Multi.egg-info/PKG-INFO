@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: Multi
+Version: 0.1
+Summary: Server and client for your app needs
+Home-page: https://github.com/hvuhsg/Multi
+Author: Yehoyada.s
+Author-email: hvuhsg6@gmail.com
+License: MIT
+Download-URL: https://github.com/hvuhsg/Multi/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: Server,Client,Easy,app,client,server
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

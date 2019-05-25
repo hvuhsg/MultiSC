@@ -12,7 +12,7 @@
 
 #### **Quick setup example (server)**
 ```python
-from MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
+from Multi.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
 
 @MonitorManager.add("client_info_printer")
@@ -30,7 +30,7 @@ Server.run()
 
 #### **client example**
 ```python
-from MultiClient.EasyClient import EasyClient
+from Multi.MultiClient.EasyClient import EasyClient
 
 def main():
     address = "127.0.0.1", 84

@@ -3,14 +3,14 @@
 <p align="center">
 <a href=""><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome"></a>
 <a href="https://badge.fury.io/py/mit"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT"></a>
-<a href="https://badge.fury.io/py/pypi"><img src="https://badge.fury.io/py/pypi.svg" alt="PyPI version" height="18"></a>
+<a href="https://badge.fury.io/py/pypi"><img src="https://badge.fury.io/py/pypi.svg" alt="PyPI version"></a>
 <a href=""><img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg" alt="coverage"></a>
 <a href=""><img src="https://img.shields.io/badge/code%20quality-A-brightgreen.svg" alt="quality"></a>
 </p>
 
 ### Server for your app needs.
 
-##### **Quick setup example (server)**
+#### **Quick setup example (server)**
 ```
 from MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
@@ -28,7 +28,7 @@ Server = Runner()
 Server.run()
 ```
 
-##### **client example**
+#### **client example**
 ```
 from MultiClient.EasyClient import EasyClient
 

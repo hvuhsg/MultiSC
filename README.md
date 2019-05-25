@@ -42,4 +42,4 @@ main()
 ```
 
 
-### for more information visit ower wiki [hare](https://github.com/hvuhsg/MultiSC/wiki)
+### for more information visit our wiki [hare](https://github.com/hvuhsg/MultiSC/wiki)

@@ -40,3 +40,6 @@ def main():
     print(user.castom_request("math", "sum", a=5, b=9)) # -> {'message': 14, 'code': 200}
 main()
 ```
+
+
+### for more information visit ower wiki [hare](https://github.com/hvuhsg/MultiSC/wiki)

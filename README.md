@@ -1,4 +1,4 @@
-# MultiServer 
+# Multi  
 
 <p align="center">
 <a href=""><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome"></a>
@@ -16,7 +16,7 @@ from Multi.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManag
 
 
 @MonitorManager.add("client_info_printer")
-def monitor(self, query, **kwargs):
+def monitor(self, query):
     print(query.other)
 
 @ProtocolsManager.add("math", "sum")

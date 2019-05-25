@@ -12,7 +12,7 @@ def root_dir_update():
 base_dir = root_dir_update()
 
 
-import __config__.system_config as config
+from ..__config__ import system_config as config
 
 config.root_path = base_dir
 config.switch_to_root_path = True

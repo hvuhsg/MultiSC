@@ -13,7 +13,7 @@ class QuickMonitor:
         self.handle = monitor_function  # main function
 
     def run_on(self, query):
-        self.monitor_function(self, query)
+        self.monitor_function(self, query, logger=self.logger, db=self.db)
 
     def is_active(self):
         return True

@@ -1,4 +1,4 @@
-from Multi.MultiClient.EasyClient import EasyClient
+from MultiSC.MultiClient.EasyClient import EasyClient
 
 
 def main():

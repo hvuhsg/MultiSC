@@ -1,15 +1,9 @@
-from Multi.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
+from MultiSC.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
 
 @MonitorManager.add("client_info_printer")
-def monitor(self, query, **kwargs):
-    logger = None
-    if "logger" in kwargs:
-        logger = kwargs['logger']
-    if logger:
-        logger.info(query.other)
-    else:
-        print(query.other)
+def monitor(self, query):
+    self.logger.info(query.other)
     #self.monitor_actions["CloseConnection"].start_action()
 
 

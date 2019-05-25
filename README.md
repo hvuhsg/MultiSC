@@ -28,7 +28,7 @@ Server = Runner()
 Server.run()
 ```
 
-#### **client example**
+#### **Client example**
 ```python
 from MultiSC.MultiClient.EasyClient import EasyClient
 

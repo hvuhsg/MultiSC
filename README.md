@@ -10,7 +10,7 @@
 
 ### Server for your app needs.
 
-##### *Quick setup example (server)*
+##### **Quick setup example (server)**
 ```
 from MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner
 
@@ -28,7 +28,7 @@ Server = Runner()
 Server.run()
 ```
 
-##### *client example*
+##### **client example**
 ```
 from MultiClient.EasyClient import EasyClient
 

@@ -1,2 +1,2 @@
 language: python
-key: python Examples/quick_setup_server.py
+script: pytest

@@ -142,11 +142,10 @@ class EasyClient(Client):
 
         total_size = None
         if self.ms_list:
-            file = None
-            for _file in self.ms_list:
-                if _file["filename"] == name:
-                    file = _file
-                    break
+            try:
+                file = self.ms_list[name]
+            except:
+                pass
             if file:
                 total_size = file["size"]
         return self._download(

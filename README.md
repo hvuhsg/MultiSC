@@ -12,7 +12,7 @@
 
 #### Installation
 ```
-pip insatll MutiSC
+$/> pip insatll MutiSC
 ```
 
 #### **Quick setup example (server)**

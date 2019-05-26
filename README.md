@@ -8,7 +8,12 @@
 <a href=""><img src="https://img.shields.io/badge/code%20quality-A-brightgreen.svg" alt="quality"></a>
 </p>
 
-### Server for your app needs.
+### Server for your app needs.  
+
+#### Installation
+```
+pip insatll MutiSC
+```
 
 #### **Quick setup example (server)**
 ```python

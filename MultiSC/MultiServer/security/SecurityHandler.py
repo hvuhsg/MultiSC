@@ -3,7 +3,8 @@ import base64
 import rsa
 
 from .encryption import Encryption
-#from .security_config import get_config
+
+# from .security_config import get_config
 
 from ..__config__ import security_config as config
 from ..global_objects import SERI, DE_SERI
@@ -36,7 +37,7 @@ class SecurityHandler:
             encryption_class, sign_key, asymmetric_key, encryption_private_key = (
                 get_config()
             )  # from security_config
-        
+
             if not issubclass(encryption_class, Encryption):
                 raise ValueError(
                     "class {} is not sub class of Encryption".format(encryption_class)

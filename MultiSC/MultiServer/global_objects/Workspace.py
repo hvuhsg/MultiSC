@@ -6,7 +6,6 @@ from ..setup import start_event
 from threading import Thread, current_thread
 
 
-
 class WorkspaceManager(GlobalObject):
     def __init__(self):
         self.global_objects = GLOBAL_OBJECTS

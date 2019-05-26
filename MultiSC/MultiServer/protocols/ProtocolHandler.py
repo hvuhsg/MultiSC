@@ -9,9 +9,6 @@ from ..global_objects import protocols_factory, GLOBAL_OBJECTS
 from ..Exceptions.ExceptionHandler import ExceptionHandler
 
 
-
-
-
 class ProtocolManager:
     def __init__(self, client_address):
         self.state = State()

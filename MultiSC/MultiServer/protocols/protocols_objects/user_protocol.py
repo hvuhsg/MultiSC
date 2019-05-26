@@ -8,8 +8,6 @@ from ...__config__ import users_config as user_config
 from ...global_objects import ManagementServerDB
 
 
-
-
 class UserProtocol(Protocol):
     def __init__(self):
         self.name = "UserProtocol"

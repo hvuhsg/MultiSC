@@ -5,6 +5,7 @@ from time import sleep
 from .global_object import GlobalObject, GlobalObjectOptions
 from ..DB.TempDB import TempDB as TempDBLocal
 
+
 class TempDB(GlobalObject):
     def __init__(self):
         self.logger = logging.getLogger("TempDB")

@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 setup(
     name="MultiSC",  # How you named your package folder
     packages=find_namespace_packages(),  # Chose the same as "name"
-    version="v0.0.2",  # Start with a small number and increase it with every change you make
+    version="v0.0.3",  # Start with a small number and increase it with every change you make
     license="MIT",  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description="Server and client for your app needs",  # Give a short description about your library
     long_description=long_description,
@@ -14,7 +14,7 @@ setup(
     author="Yehoyada.s",  # Type in your name
     author_email="hvuhsg6@gmail.com",  # Type in your E-Mail
     url="https://github.com/hvuhsg/MultiSC",  # Provide either the link to your github or to your website
-    download_url="https://github.com/hvuhsg/MultiSC/archive/v0.0.2.tar.gz",  # I explain this later on
+    download_url="https://github.com/hvuhsg/MultiSC/archive/v0.0.3.tar.gz",  # I explain this later on
     keywords=[
         "Server",
         "Client",

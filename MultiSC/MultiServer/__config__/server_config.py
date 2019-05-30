@@ -1,5 +1,5 @@
 # server ip
-IP = "127.0.0.1"
+IP = "0.0.0.0"
 
 # server port
 PORT = 84

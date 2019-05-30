@@ -14,7 +14,7 @@ virtual_db_default_name = "virtualserevr"
 
 virtual_db_default_password = "virtualserevrpass"
 
-timeout = 5000  # 5 seconds
+timeout = 1500  # 5 seconds
 
 USERS_TABLE_NAME = "users"
 

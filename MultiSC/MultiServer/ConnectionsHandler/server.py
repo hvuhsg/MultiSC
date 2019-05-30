@@ -22,6 +22,7 @@ import threading
 from socketserver import ThreadingTCPServer
 
 from ..__config__ import server_config as config
+from ..__config__ import system_config as sys_config
 from ..global_objects.global_object import GlobalObject, GlobalObjectOptions
 from ..global_objects import ManagementServerDB
 from .RequestHandler import RequestHandler
@@ -92,12 +93,20 @@ class Server(ThreadingTCPServer, GlobalObject):
 
     def get_request(self):
         self.connections_count += 1
-        self.DBapi.new_client(self.address)
+        try:
+            self.DBapi.new_client(self.address)
+        except Exception as ce:
+            if sys_config.debug:
+                raise ce
         return super().get_request()
 
     def close_request(self, request):
         self.connections_count -= 1
-        self.DBapi.close_client(self.address)
+        try:
+            self.DBapi.close_client(self.address)
+        except Exception as ce:
+            if sys_config.debug:
+                raise ce
         super().close_request(request)
 
 

@@ -7,6 +7,7 @@ from ..protocols.protocol_factory import Factory
 from ..security.serializer import serializer, de_serializer
 from .global_object import GLOBAL_OBJECTS
 from ..__config__ import db_config as config
+from ..__config__ import system_config as sys_config
 
 __all__ = [
     "TEMP_DB",
@@ -44,8 +45,9 @@ def setup_all():
             g_object.__setup__()
             print("setup:", g_object)
         except Exception as ex:
-            traceback.print_exc()
-            print("setup except on {}:".format(g_object), ex)
+            if sys_config.debug:
+                traceback.print_exc()
+            print("setup exception on {}:".format(g_object), ex)
 
 
 def finish_all():
@@ -54,4 +56,6 @@ def finish_all():
             g_object.__finish__()
             print("finish:", g_object)
         except Exception as ex:
-            print("finish except:", ex)
+            if sys_config.debug:
+                traceback.print_exc()
+            print("finish exception on {}:".format(g_object), ex)

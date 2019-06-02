@@ -17,9 +17,9 @@ def main():
         print("get one argument <server|client>")
     
     if argv[1] == "server":
-        copyanything("MultiSC/MultiServer/__config__", "./__config__")
+        copyanything("MultiServer/__config__", "./__config__")
     elif argv[1] == "client":
-        copyanything("MultiSC/MultiClient/__client_config__", "./__client_config__")
+        copyanything("MultiClient/__client_config__", "./__client_config__")
 
 if __name__ == '__main__':
     main()

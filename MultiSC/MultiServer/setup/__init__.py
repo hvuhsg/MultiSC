@@ -1,7 +1,7 @@
 import logging
 from threading import Event
 
-from ..__config__ import logging_config as config
+from __config__ import logging_config as config
 from ..global_objects import setup_all
 from ..monitors import monitorfactory  # do not delete!!
 

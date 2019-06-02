@@ -1,4 +1,4 @@
-from ..__config__.protocol_code_config import server_error
+from __config__.protocol_code_config import server_error
 from .MainException import MainException
 
 

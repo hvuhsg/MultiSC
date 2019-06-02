@@ -1,4 +1,4 @@
-from ..__config__ import protocol_code_config as config
+from __config__ import protocol_code_config as config
 from ..Exceptions.QueryKeyError import QueryKeyError
 
 

@@ -1,5 +1,5 @@
 from .MainException import MainException
-from ..__config__.protocol_code_config import arg_not_found
+from __config__.protocol_code_config import arg_not_found
 
 
 class QueryKeyError(KeyError, MainException):

@@ -1,10 +1,10 @@
 from socket import socket, AF_INET, SOCK_DGRAM
-
+from __client_config__ import dns_config
 
 class DNSClient(object):
     def __init__(self):
         self.sock = socket(AF_INET, SOCK_DGRAM)
-        self.dns_address = ("127.0.0.1", 43)
+        self.dns_address = (dns_config.ip, dns_config.port)
 
     def get_server_ip(self):
         msg = b"get server address"
@@ -24,4 +24,3 @@ def test():
 
 if __name__ == "__main__":
     test()
-    input("Enter to exit.")

@@ -1,6 +1,6 @@
 from ..protocol import Protocol
 from ...global_objects import ManagementServerDB
-from ...__config__.protocol_code_config import argument_invalid
+from __config__.protocol_code_config import argument_invalid
 
 
 class CoinProtocol(Protocol):

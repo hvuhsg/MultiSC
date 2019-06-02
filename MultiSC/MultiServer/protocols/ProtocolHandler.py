@@ -4,7 +4,7 @@ from threading import current_thread
 from .state import State
 from .query import Query
 
-from ..__config__ import protocol_code_config as config
+from __config__ import protocol_code_config as config
 from ..global_objects import protocols_factory, GLOBAL_OBJECTS
 from ..Exceptions.ExceptionHandler import ExceptionHandler
 

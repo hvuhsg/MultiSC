@@ -32,7 +32,8 @@ from socket import timeout
 from socketserver import BaseRequestHandler
 from threading import current_thread
 
-from ..__config__ import request_handler_config as config
+from __config__ import request_handler_config as config
+from __config__ import security_config
 from ..Exceptions.CloseConnection import CloseConnection
 from ..protocols.ProtocolHandler import ProtocolManager
 from ..security.SecurityHandler import SecurityHandler
@@ -66,7 +67,7 @@ class RequestHandler(BaseRequestHandler):
         self.connection.settimeout(self.settings["timeout"])
         self.logger.info("setup handler")
         try:
-            if config.SECURITY:
+            if security_config.SECURITY:
                 self.security_handler.secure_connection()
         except ConnectionError as ex:
             self.logger.debug("secure connection exception, {}".format(ex))
@@ -111,7 +112,7 @@ class RequestHandler(BaseRequestHandler):
                 "proxy_data: {} client sent: {}".format(proxy_data, client_data)
             )
             return client_data
-        if not config.SECURITY:
+        if not security_config.SECURITY:
             client_data = DE_SERI(client_data)
             self.logger.info(
                 "proxy_data: {} client sent: {}".format(proxy_data, client_data)
@@ -123,7 +124,7 @@ class RequestHandler(BaseRequestHandler):
             self.logger.info("server sent: {}".format(message))
             message = SERI(message)
             message = self.security_handler.encrypt(message)
-        elif not config.SECURITY:
+        elif not security_config.SECURITY:
             message = SERI(message)
         self.connection.send(message)
 
@@ -149,7 +150,6 @@ class RequestHandler(BaseRequestHandler):
             return
         if self.update_to_proxy_data:
             return
-
         if "client_address" not in self.proxy_data:
             return
 

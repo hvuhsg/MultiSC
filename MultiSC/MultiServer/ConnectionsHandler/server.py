@@ -21,8 +21,8 @@ import logging
 import threading
 from socketserver import ThreadingTCPServer
 
-from ..__config__ import server_config as config
-from ..__config__ import system_config as sys_config
+from __config__ import server_config as config
+from __config__ import system_config as sys_config
 from ..global_objects.global_object import GlobalObject, GlobalObjectOptions
 from ..global_objects import ManagementServerDB
 from .RequestHandler import RequestHandler

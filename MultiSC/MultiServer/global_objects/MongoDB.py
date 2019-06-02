@@ -1,6 +1,6 @@
 from .global_object import GlobalObject, GlobalObjectOptions
 from ..DB.MongoDbAPI import MongoDB
-from ..__config__ import db_config as config
+from __config__ import db_config as config
 
 
 class GlobalMongoDbClient(GlobalObject):

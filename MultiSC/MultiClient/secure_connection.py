@@ -4,14 +4,14 @@ import base64
 from cryptography.fernet import Fernet
 from random import getrandbits
 
-VERIFY_PUBLIC_KEY_PATH = r"MultiClient\public_verify_key.rsa"
+from __client_config__ import security_config
 
-CHACK_MESSAGE = "check"
 
+CHACK_MESSAGE = security_config.CHACK_MESSAGE
 
 class secure_connection(object):
     def __init__(self):
-        self.verify_key = self.load_key(VERIFY_PUBLIC_KEY_PATH)
+        self.verify_key = self.load_key(security_config.VERIFY_PUBLIC_KEY_PATH)
         self.public_key = None
         self.fernet = None
 

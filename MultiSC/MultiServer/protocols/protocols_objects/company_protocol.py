@@ -1,7 +1,7 @@
 from time import time
 from ..protocol import Protocol
-from ...__config__ import protocol_code_config as config
-from ...__config__ import companys_config
+from __config__ import protocol_code_config as config
+from __config__ import companys_config
 from ...global_objects import ManagementServerDB
 
 

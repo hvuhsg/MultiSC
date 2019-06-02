@@ -3,7 +3,7 @@ import base64
 import os
 
 from .client import Client, Request
-
+from __client_config__ import connection_config
 
 class ClientError(Exception):
     def __init__(self, msg=""):
@@ -11,10 +11,10 @@ class ClientError(Exception):
 
 
 class EasyClient(Client):
-    def __init__(self, server_address=None, recv_count=10000):
-        self.recv_count = recv_count
-        self.default_download_size = int(self.recv_count * 0.30)
-        self.default_upload_size = int(self.recv_count * 0.30)
+    def __init__(self, server_address=None):
+        self.recv_count = connection_config.recv_package_size
+        self.default_download_size = connection_config.download_package_size
+        self.default_upload_size = connection_config.upload_package_size
         self.ms_list = None
         super().__init__(server_address)
 

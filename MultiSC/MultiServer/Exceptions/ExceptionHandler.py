@@ -3,8 +3,8 @@ from pymongo.errors import PyMongoError
 
 from .MainException import MainException
 
-from ..__config__ import protocol_code_config as config
-from ..__config__ import system_config as sys_config
+from __config__ import protocol_code_config as config
+from __config__ import system_config as sys_config
 from ..Exceptions.TestException import TestException
 from ..Handlers.catch_events_handler import CatchEventsHandler
 

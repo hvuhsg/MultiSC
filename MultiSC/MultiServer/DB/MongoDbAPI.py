@@ -2,7 +2,7 @@ import pymongo
 import gridfs
 from .AbsDb import AbsDb
 
-from ..__config__ import db_config as config
+from __config__ import db_config as config
 
 
 class MongoDB(AbsDb):

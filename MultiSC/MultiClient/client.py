@@ -3,31 +3,29 @@ import json
 from .secure_connection import secure_connection
 from .DNSClient import DNSClient
 
+from __client_config__ import connection_config, security_config
+
 __all__ = ["Client", "Request"]
 
 
 class Client(object):
     def __init__(self, server_address=None):
         if not server_address:
+            server_address = connection_config.defulte_ip, connection_config.port
+        if connection_config.get_dns_address:
             server_address = DNSClient().get_server_ip()
         self.server_address = server_address
         self.sock = socket.socket()
-        self.SEC = None
+        self.SEC = secure_connection()
         self.encryption_key = None
         self.address = server_address
         self.connected = False
-        self.secure = False
+        self.secure = security_config.security_activate
 
     def connect(self):
         self.sock.connect(self.address)
         if self.secure:
-            self.SEC = secure_connection()
-            self.SEC(self.sock)
-        self.connected = True
-
-    def direct_connect(self, address):
-        self.sock.connect(address)
-        # self.secure_connection()
+            self.secure_connection()
         self.connected = True
 
     def secure_connection(self):

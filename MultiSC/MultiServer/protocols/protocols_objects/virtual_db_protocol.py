@@ -1,7 +1,7 @@
 from random import getrandbits
 from ..protocol import Protocol
 from ...global_objects import VirtualDB, ManagementServerDB
-from ...__config__ import protocol_code_config as config
+from __config__ import protocol_code_config as config
 
 
 class VirtualDBProtocol(Protocol):

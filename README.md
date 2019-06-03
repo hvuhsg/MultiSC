@@ -15,6 +15,17 @@
 $/> pip insatll MultiSC
 ```
 
+#### New project (server)
+```
+$/> get_config server
+```
+
+#### New project (client)
+```
+$/> get_config client
+```
+
+
 #### **Quick setup example (server)**
 ```python
 from MultiSC.MultiServer.quick_setup.manager import ProtocolsManager, MonitorManager, Runner

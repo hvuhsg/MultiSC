@@ -1,12 +1,8 @@
 import shutil, errno
 
-def copyanything(src, dst):
-    try:
-        shutil.copytree(src, dst)
-    except OSError as exc:
-        if exc.errno == errno.ENOTDIR:
-            shutil.copy(src, dst)
-        else: raise
+def copyanything(src, dst):    
+    shutil.copytree(src, dst)
+
 
 
 def main():

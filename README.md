@@ -17,12 +17,12 @@ $/> pip insatll MultiSC
 
 #### New project (server)
 ```
-$/> make_server server
+$/> make_multi server
 ```
 
 #### New project (client)
 ```
-$/> make_server client
+$/> make_multi client
 ```
 
 

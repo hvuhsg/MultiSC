@@ -15,7 +15,6 @@ class Factory(GlobalObject):
 
     def __setup__(self):
         from .protocols_groups.groups import all_groups
-
         self.groups = all_groups
 
     def __finish__(self):

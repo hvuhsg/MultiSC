@@ -11,7 +11,7 @@ __all__ = ["Client", "Request"]
 class Client(object):
     def __init__(self, server_address=None):
         if not server_address:
-            server_address = connection_config.defulte_ip, connection_config.port
+            server_address = connection_config.defulte_ip, connection_config.defulte_port
         if connection_config.get_dns_address:
             server_address = DNSClient().get_server_ip()
         self.server_address = server_address

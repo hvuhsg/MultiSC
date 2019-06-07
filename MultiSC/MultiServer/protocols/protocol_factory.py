@@ -1,5 +1,6 @@
 from ..global_objects.global_object import GlobalObject
 from __config__ import system_config as sys_config
+from importlib import import_module
 
 if sys_config.quick_setup_mod:
     from ..quick_setup import ProtocolsManager
@@ -14,8 +15,12 @@ class Factory(GlobalObject):
         super().__init__(self.global_object_name)
 
     def __setup__(self):
-        from .protocols_groups.groups import all_groups
-        self.groups = all_groups
+        try:
+            groups_module = import_module(sys_config.groups_module_path)
+            self.groups = groups_module.all_groups
+        except ImportError as ex:
+            print("cant load protocols groups module", ex)
+            self.groups = {}
 
     def __finish__(self):
         pass

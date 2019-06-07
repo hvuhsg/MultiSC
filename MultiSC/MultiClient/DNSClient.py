@@ -1,6 +1,7 @@
 from socket import socket, AF_INET, SOCK_DGRAM
 from __client_config__ import dns_config
 
+
 class DNSClient(object):
     def __init__(self):
         self.sock = socket(AF_INET, SOCK_DGRAM)

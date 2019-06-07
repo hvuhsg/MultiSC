@@ -5,6 +5,7 @@ import os
 from .client import Client, Request
 from __client_config__ import connection_config
 
+
 class ClientError(Exception):
     def __init__(self, msg=""):
         super().__init__(msg)

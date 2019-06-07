@@ -12,6 +12,7 @@ def load_key(key_path):
         return rsa.PrivateKey.load_pkcs1(key_data)
     return rsa.PublicKey.load_pkcs1(key_data)
 
+
 def get_config():
     public_key = open(security_config.PUB_KEY_PATH, "r").read()
     sign_private_key = load_key(security_config.SIGN_PRIVATE_KEY_PATH)

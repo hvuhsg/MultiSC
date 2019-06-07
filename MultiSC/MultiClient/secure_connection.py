@@ -9,6 +9,7 @@ from __client_config__ import security_config
 
 CHACK_MESSAGE = security_config.CHACK_MESSAGE
 
+
 class secure_connection(object):
     def __init__(self):
         self.verify_key = self.load_key(security_config.VERIFY_PUBLIC_KEY_PATH)

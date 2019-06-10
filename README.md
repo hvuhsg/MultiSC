@@ -18,6 +18,7 @@ $/> pip insatll MultiSC
 #### New project (server)
 ```
 $/> make_multi server
+$/> make_multi server -q //for quick setup mode
 ```
 
 #### New project (client)

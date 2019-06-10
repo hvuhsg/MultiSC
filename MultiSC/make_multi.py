@@ -1,4 +1,5 @@
 import shutil
+import argparse
 
 
 def copyanything(src, dst):
@@ -11,13 +12,17 @@ def main():
 
     dir_path = path.dirname(__file__)
 
-    if len(argv) < 2 or argv[1] not in ("server", "client"):
-        print("get one argument <server|client>")
+    parser = argparse.ArgumentParser(description='Create new Multi project <server|client>.')
+    parser.add_argument("ProjectType",
+            choices=["server", "client"],
+            help="Project type to create.")
+    parser.add_argument("-q", "--quick", const=True, action="store_const")
+    args = parser.parse_args()
 
     try:
-        if argv[1] == "server":
+        if args.ProjectType == "server":
             copyanything(path.join(dir_path, "MultiServer/__config__"), "./__config__")
-            if len(argv) > 2 and argv[2] in ("--quick", "-q"):
+            if args.quick:
                 shutil.copyfile(
                     path.join(dir_path, "Examples/simple_quick_server.py"),
                     "./simple_quick_server.py",
@@ -28,7 +33,7 @@ def main():
                     path.join(dir_path, "Examples/simple_server.py"),
                     "./simple_server.py",
                 )
-        elif argv[1] == "client":
+        elif args.ProjectType == "client":
             copyanything(
                 path.join(dir_path, "MultiClient/__client_config__"),
                 "./__client_config__",

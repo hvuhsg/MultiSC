@@ -15,6 +15,8 @@ class Factory(GlobalObject):
         super().__init__(self.global_object_name)
 
     def __setup__(self):
+        if sys_config.quick_setup_mod:
+            return
         try:
             groups_module = import_module(sys_config.groups_module_path)
             self.groups = groups_module.all_groups
